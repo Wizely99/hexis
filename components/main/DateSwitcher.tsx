@@ -1,8 +1,9 @@
 "use client";
+import { dateToShortString } from "@/utils/dateUtils";
 import React from "react";
 interface DateSwitcherProps {
-  startDate: string;
-  endDate: string;
+  startDate: Date;
+  endDate: Date;
   onDateIncrement: () => void;
   onDateDecrement: () => void;
 }
@@ -26,14 +27,14 @@ function DateSwitcher({
       >
         <path
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="48"
+          strokeLinejoin="round"
+          strokeLinecap="round"
+          strokeWidth={48}
           d="M328 112L184 256l144 144"
         ></path>
       </svg>
       <div className="text-white text-base font-normal leading-normal tracking-tight">
-        {startDate} - {endDate}
+        {dateToShortString(startDate)} - {dateToShortString(endDate)}
       </div>
       <svg
         onClick={onDateIncrement}
@@ -49,9 +50,9 @@ function DateSwitcher({
       >
         <path
           fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="48"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={48}
           d="M184 112l144 144-144 144"
         ></path>
       </svg>

@@ -114,9 +114,9 @@ const WorkoutOne = () => {
                   id="Vector"
                   d="M4.91372 16.0007L6.51372 12.0007H3.31372L4.91372 8.00069"
                   stroke="#F9F9F9"
-                  stroke-width="0.88"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={0.88}
                 ></path>
                 <path
                   id="Vector 430"

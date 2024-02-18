@@ -4,33 +4,24 @@ import Card from "./Card";
 import LoggedUser from "./LoggedUser";
 import MacrosButton from "./MacrosButton";
 import DateSwitcher from "./DateSwitcher";
-
+import { addDays, getWeekDays } from "@/utils/dateUtils";
 const MainSection = () => {
-  const [dates, setDates] = useState([
-    "12 Feb",
-    "13 Feb",
-    "14 Feb",
-    "15 Feb",
-    "16 Feb",
-    "17 Feb",
-    "18 Feb",
-  ]);
+  const today = new Date();
+  const weekDays = getWeekDays(today);
+  const [dates, setDates] = useState(weekDays);
+
   function goToNextWeek() {
     setDates((prevDates) => {
-      return [
-        "19 Feb",
-        "20 Feb",
-        "21 Feb",
-        "22 Feb",
-        "23 Feb",
-        "24 Feb",
-        "25 Feb",
-      ];
+      return prevDates.map((date) => {
+        return addDays(date, 7);
+      });
     });
   }
   function goToPreviousWeek() {
     setDates((prevDates) => {
-      return ["5 Feb", "6 Feb", "7 Feb", "8 Feb", "9 Feb", "10 Feb", "11 Feb"];
+      return prevDates.map((date) => {
+        return addDays(date, -7);
+      });
     });
   }
 
