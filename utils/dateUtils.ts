@@ -1,13 +1,6 @@
 function getWeekDays(date: Date): Date[] {
-    // Handle different input formats gracefully
-    if (!(date instanceof Date)) {
-      date = new Date(date); // Attempt to convert from string or number
-    }
-    if (isNaN(date.getTime())) {
-      throw new Error("Invalid date input provided.");
-    }
-  
-    // Determine day of the week (0-based: Sunday=0, Monday=1)
+    
+  // Get today's weekDay
     const dayOfWeek = date.getDay();
   
     // Calculate offset to adjust date to the previous Monday
@@ -27,20 +20,13 @@ function getWeekDays(date: Date): Date[] {
 }
   
 function dateToShortString(dateObj: Date): string {
+  // Return a string in the format "DD MMM"
     return `${dateObj.getDate()} ${dateObj.toLocaleString('en-US', { month: 'short' })}`;
 }
-function addDays(date:Date, days:number):Date {
+function addDays(date: Date, days: number): Date {
+  // Create a new date object, adding the specified number of days
   date.setDate(date.getDate() + days);
     return date;
   }
   
 export { getWeekDays, dateToShortString,addDays };
-  
-  // Example usage:
-  
-  
-//   console.log("Current week days (Monday to Sunday):");
-//   for (const day of weekDays) {
-//     console.log(day.toLocaleDateString()); // Format based on user's locale
-//   }
-  
