@@ -1,10 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import Card from "./Card";
+
+import { addDays, getWeekDays } from "@/utils/dateUtils";
+import DateSwitcher from "./DateSwitcher";
 import LoggedUser from "./LoggedUser";
 import MacrosButton from "./MacrosButton";
-import DateSwitcher from "./DateSwitcher";
-import { addDays, getWeekDays } from "@/utils/dateUtils";
+
 const MainSection = () => {
   const today = new Date();
   const weekDays = getWeekDays(today);
@@ -20,7 +22,7 @@ const MainSection = () => {
 
   return (
     <main className=" relative p-8 pl-72 -screen ">
-      <div className="fixed left-64 flex justify-between p-4 mx-auto fit-screen">
+      <div className="fixed left-64 top-0 flex justify-between z-40 px-10 py-6 mx-auto fit-screen  bg-[#17152d]">
         <div className="flex gap-4">
           <DateSwitcher
             startDate={dates[0]}

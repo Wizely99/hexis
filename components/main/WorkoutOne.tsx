@@ -3,8 +3,8 @@ import React from "react";
 const WorkoutOne = () => {
   return (
     <div className="mb-3">
-      <div className="card max-w-96 bg-[#30314c] !rounded-b-none">
-        <div className="flex-center text-base font-semibold mb-3">
+      <div className="p-3 flex items-center justify-between rounded-t-2xl bg-[#30314c] ">
+        <div className="flex items-center text-base font-semibold mb-3">
           <svg
             stroke="currentColor"
             fill="currentColor"
@@ -22,10 +22,10 @@ const WorkoutOne = () => {
         </div>
         <div className="text-xs">09:30 - 11:30 AM</div>
       </div>
-      <div className="card max-w-96 bg-[#26273d] !rounded-t-none !rounded-b-none">
-        <div className="flex-center justify-between mb-1">
-          <div className="flex-center space-x-1">
-            <span className="flex-center text-sm">
+      <div className="p-3 flex items-center justify-between max-w-96 bg-[#26273d] !rounded-t-none !rounded-b-none">
+        <div className="flex items-center justify-between mb-1">
+          <div className="flex items-center space-x-1">
+            <span className="flex items-center text-sm">
               Mod{" "}
               <svg
                 width="14"
@@ -77,7 +77,7 @@ const WorkoutOne = () => {
               ></path>
             </svg>
           </div>
-          <div className="flex-center space-x-2">
+          <div className="flex items-center space-x-2">
             <svg
               width="11"
               height="22"
@@ -135,13 +135,13 @@ const WorkoutOne = () => {
           </div>
         </div>
       </div>
-      <div className="card !pt-0 !px-0 max-w-96 bg-gradient-to-r from-[#359cef] !rounded-t-none">
+      <div className="p-3 flex items-center relative justify-between !pt-0 !px-0 max-w-96 bg-gradient-to-r from-[#359cef] !rounded-t-none">
         <div className="p-3 max-w-96 text-xs bg-[#30314c]">
-          <div className="flex-center justify-between font-semibold mb-2">
+          <div className="flex items-center justify-between font-semibold mb-2">
             <span className="">700 Kcal</span>
             <span>10:15</span>
           </div>
-          <div className="flex-center justify-between">
+          <div className="flex items-center justify-between">
             <span className="">50g C</span>•<span>40g P</span>•
             <span>20g F</span>
           </div>

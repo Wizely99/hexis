@@ -27,7 +27,7 @@ body {
   }
 }
 .fit-screen {
-  width: calc(100vw - 18rem);
+  width: calc(100vw - 16rem);
 }
 .sidebar:hover ~ main {
   @apply pl-72;
