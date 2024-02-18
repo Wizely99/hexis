@@ -20,9 +20,7 @@ const Sidebar = () => {
       </div>
       <div className="space-y-4 mt-6">
         {items.map((item, index) => (
-          <Link key={index} href="#">
-            <SidebarItem {...item} href="#" />
-          </Link>
+          <SidebarItem key={index} {...item} href="#" />
         ))}
       </div>
     </nav>

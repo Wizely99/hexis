@@ -1,10 +1,21 @@
 "use client";
 import React from "react";
-
-function DateSwitcher() {
+interface DateSwitcherProps {
+  startDate: string;
+  endDate: string;
+  onDateIncrement: () => void;
+  onDateDecrement: () => void;
+}
+function DateSwitcher({
+  startDate,
+  endDate,
+  onDateIncrement,
+  onDateDecrement,
+}: DateSwitcherProps) {
   return (
     <div className="flex items-center justify-center px-4 py-2 bg-gray-700 rounded-lg gap-3">
       <svg
+        onClick={onDateDecrement}
         stroke="currentColor"
         fill="currentColor"
         stroke-width="0"
@@ -22,9 +33,10 @@ function DateSwitcher() {
         ></path>
       </svg>
       <div className="text-white text-base font-normal leading-normal tracking-tight">
-        9th - 15th October
+        {startDate} - {endDate}
       </div>
       <svg
+        onClick={onDateIncrement}
         stroke="currentColor"
         fill="currentColor"
         stroke-width="0"

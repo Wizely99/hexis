@@ -15,11 +15,35 @@ const MainSection = () => {
     "17 Feb",
     "18 Feb",
   ]);
+  function goToNextWeek() {
+    setDates((prevDates) => {
+      return [
+        "19 Feb",
+        "20 Feb",
+        "21 Feb",
+        "22 Feb",
+        "23 Feb",
+        "24 Feb",
+        "25 Feb",
+      ];
+    });
+  }
+  function goToPreviousWeek() {
+    setDates((prevDates) => {
+      return ["5 Feb", "6 Feb", "7 Feb", "8 Feb", "9 Feb", "10 Feb", "11 Feb"];
+    });
+  }
+
   return (
     <main className=" relative p-8 pl-72 -screen ">
       <div className="fixed left-64 flex justify-between p-4 mx-auto fit-screen">
         <div className="flex gap-4">
-          <DateSwitcher />
+          <DateSwitcher
+            startDate={dates[0]}
+            endDate={dates[dates.length - 1]}
+            onDateDecrement={goToPreviousWeek}
+            onDateIncrement={goToNextWeek}
+          />
           <MacrosButton />
         </div>
         <LoggedUser />
