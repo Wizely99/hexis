@@ -30,7 +30,7 @@ function dateToShortString(dateObj: Date): string {
     return `${dateObj.getDate()} ${dateObj.toLocaleString('en-US', { month: 'short' })}`;
 }
 function addDays(date:Date, days:number):Date {
-    date.setDate(date.getDate() + days);
+  date.setDate(date.getDate() + days);
     return date;
   }
   

@@ -16,7 +16,7 @@ const LogoSvg = () => {
         transform="rotate(180 19.8767 6.5002)"
         fill="#242543"
         stroke="#00A499"
-        stroke-width="1.23828"
+        strokeWidth={1.23828}
       ></circle>
       <circle
         cx="13.385"
@@ -25,7 +25,7 @@ const LogoSvg = () => {
         transform="rotate(180 13.385 6.5001)"
         fill="#242543"
         stroke="#FF9301"
-        stroke-width="1.23828"
+        strokeWidth={1.23828}
       ></circle>
       <circle
         cx="6.89552"
@@ -34,7 +34,7 @@ const LogoSvg = () => {
         transform="rotate(180 6.89552 6.5001)"
         fill="#242543"
         stroke="#E73D5B"
-        stroke-width="1.23828"
+        strokeWidth={1.23828}
       ></circle>
     </svg>
   );

@@ -29,7 +29,6 @@ function CardBody() {
             onClick={() => {
               setClickCount((prevCount) => {
                 const newCount = prevCount + 1;
-                alert(newCount);
                 return newCount;
               });
             }}
@@ -42,7 +41,6 @@ function CardBody() {
             onClick={() => {
               setClickCount((prevCount) => {
                 const newCount = prevCount - 1;
-                alert(newCount);
                 return newCount;
               });
             }}

@@ -11,18 +11,11 @@ const MainSection = () => {
   const [dates, setDates] = useState(weekDays);
 
   function goToNextWeek() {
-    setDates((prevDates) => {
-      return prevDates.map((date) => {
-        return addDays(date, 7);
-      });
-    });
+    setDates(dates.map((date) => addDays(date, 7)));
   }
+
   function goToPreviousWeek() {
-    setDates((prevDates) => {
-      return prevDates.map((date) => {
-        return addDays(date, -7);
-      });
-    });
+    setDates(dates.map((date) => addDays(date, -7)));
   }
 
   return (
