@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Card from "./Card";
 
-import { addDays, getWeekDays } from "@/utils/dateUtils";
+import { addDays, dateToShortString, getWeekDays } from "@/utils/dateUtils";
 import DateSwitcher from "./DateSwitcher";
 import LoggedUser from "./LoggedUser";
 import MacrosButton from "./MacrosButton";
@@ -37,7 +37,7 @@ const MainSection = () => {
       <div className="overflow-x-auto mt-24">
         <div className="bg-white flex flex-col sm:flex-row ">
           {dates.map((date, index) => (
-            <Card key={index} date={date} />
+            <Card key={dateToShortString(date)} date={date} />
           ))}
         </div>
       </div>
