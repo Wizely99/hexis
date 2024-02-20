@@ -6,14 +6,15 @@ interface ItemProps {
   svg: React.JSX.Element;
   color?: string;
   href: string;
+  hidden: boolean;
 }
 
-const SidebarItem = ({ name, svg, color, href = "#" }: ItemProps) => {
+const SidebarItem = ({ name, svg, color, hidden, href = "#" }: ItemProps) => {
   return (
-    <Link href={href} key={name}>
+    <Link href={href} key={name} className={`${color}`}>
       <div className="flex items-center mb-6">
         <div className="w-6 h-6">{svg}</div>
-        <span className="ml-3">{name}</span>
+        <span className={`ml-3 ${!hidden && "hidden"}`}>{name}</span>
       </div>
     </Link>
   );

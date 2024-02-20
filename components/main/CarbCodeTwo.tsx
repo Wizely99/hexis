@@ -37,7 +37,7 @@ function CarbCodeTwo() {
             </span>
             <span>10:15</span>
           </div>
-          <div className="flex items-center justify-between separator-disc">
+          <div className="flex items-center justify-between ">
             <span className="">50g C</span>
             <span>40g P</span>
             <span>20g F</span>

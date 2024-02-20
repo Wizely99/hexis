@@ -6,6 +6,7 @@ export default function Home() {
     <>
       <div className="flex min-h-screen ">
         <Sidebar />
+
         <MainSection />
       </div>
     </>

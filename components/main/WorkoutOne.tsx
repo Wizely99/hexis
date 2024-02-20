@@ -3,7 +3,7 @@ import React from "react";
 const WorkoutOne = () => {
   return (
     <div className="mb-3">
-      <div className="p-3 flex items-center justify-between rounded-t-2xl bg-[#30314c] ">
+      <div className="p-3 flex relative items-center justify-between rounded-t-2xl bg-[#30314c] ">
         <div className="flex items-center text-base font-semibold mb-3">
           <svg
             stroke="currentColor"
@@ -135,13 +135,13 @@ const WorkoutOne = () => {
           </div>
         </div>
       </div>
-      <div className="p-3 flex items-center relative justify-between !pt-0 !px-0 max-w-96 bg-gradient-to-r from-[#359cef] !rounded-t-none">
-        <div className="p-3 max-w-96 text-xs bg-[#30314c]">
+      <div className="p-3 flex items-center rounded-2xl relative justify-between !pt-0 !px-0 max-w-96 bg-gradient-to-r from-[#359cef] !rounded-t-none">
+        <div className="p-3  text-xs bg-[#30314c]">
           <div className="flex items-center justify-between font-semibold mb-2">
             <span className="">700 Kcal</span>
             <span>10:15</span>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex  items-center justify-between">
             <span className="">50g C</span>•<span>40g P</span>•
             <span>20g F</span>
           </div>

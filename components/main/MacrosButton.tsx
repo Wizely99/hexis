@@ -1,9 +1,12 @@
 import React from "react";
-
-function MacrosButton() {
+interface MacrosButtonProps {
+  onClick: () => void;
+}
+function MacrosButton({ onClick }: MacrosButtonProps) {
   return (
     <div>
       <button
+        onClick={() => onClick()}
         type="button"
         className="flex items-center justify-center px-3 py-2 rounded-lg shadow border border-blue-500 gap-2.5 text-center text-white text-base capitalize false"
       >
