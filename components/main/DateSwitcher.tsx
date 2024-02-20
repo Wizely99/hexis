@@ -14,7 +14,7 @@ function DateSwitcher({
   onDateDecrement,
 }: DateSwitcherProps) {
   return (
-    <div className="flex items-center justify-center px-4 py-2 bg-gray-700 rounded-lg gap-3">
+    <div className="flex w-fit items-center  px-4 py-2 bg-gray-700 rounded-lg gap-3">
       <svg
         onClick={() => onDateDecrement()}
         stroke="currentColor"

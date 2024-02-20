@@ -42,13 +42,15 @@ const Card = ({ date }: CardProps) => {
     console.log("add item");
   };
   return (
-    <div className=" border border-[#30314c] bg-[#17152d] w-72   ">
+    <div className=" border border-[#30314c] bg-[#17152d] flex flex-col sm:w-72  ">
       <CardHeader {...{ date }} />
       <CardBody />
-      <div className={`p-4 ${hidden && "hidden"}`}>
-        {cardObjects.map((obj, index) => (
-          <React.Fragment key={index}>{obj()}</React.Fragment>
-        ))}
+      <div className="p-4">
+        <div className={` ${hidden && "hidden"}`}>
+          {cardObjects.map((obj, index) => (
+            <React.Fragment key={index}>{obj()}</React.Fragment>
+          ))}
+        </div>
       </div>
       <CardButtons addItem={addItem} removeItem={removeItems} />
     </div>

@@ -27,8 +27,20 @@ body {
   }
 }
 .fit-screen {
-  width: calc(100vw - 16rem);
+  width: 100%;
 }
 .sidebar:hover ~ main {
-  @apply pl-72;
+  @apply pl-52 sm:pl-72;
+}
+.sidebar:hover .sidebar-item-text {
+  display: block;
+}
+.sidebar:hover + main .fit-screen {
+  @apply pl-52 sm:pl-72;
+}
+.sidebar:hover a {
+  @apply justify-start;
+}
+.card {
+  width: calc(100vw - 7rem);
 }
